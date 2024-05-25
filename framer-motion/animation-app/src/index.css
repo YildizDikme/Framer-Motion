@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --color-border: #424242;
+  --color-bg: #000000;
+  --highlight-background: linear-gradient(135deg, #d223cc, hsl(336, 100%, 67%));
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  position: relative;
+  background-color: var(--color-bg);
+  font-size: 1.2rem;
+  color: hsla(180, 7%, 75%, 0.9);
+  overflow-x: hidden;
+}
+
+input, button, a{
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+
+.gradient-text {
+  background: var(--highlight-background);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline; 
+}
+
+.gradient-dot {
+  display: inline-block;
+  width: 1rem; 
+  height: 1rem; 
+  border-radius: 50%;
+  background: var(--highlight-background);
+}
+.btn-grad {
+  @apply bg-gradient-to-r from-customStart via-customMiddle to-customStart text-white shadow-lg rounded-lg text-center  transition duration-500 ease-in-out py-2 px-4 text-sm	 m-2;
+
+  background-size: 350% auto;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
